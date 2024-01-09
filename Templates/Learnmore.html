@@ -1,0 +1,36 @@
+<html><head><style>
+.learn-more {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+.learn-more h2 {
+    color: #7ea04d;
+}
+
+.learn-more .btn-learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7ea04d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.learn-more .btn-learn-more:hover {
+    background-color: #5c7b3a;
+}</style></head>
+</html>
+<body>
+    <div class="learn-more">
+        <h2>Learn More</h2>
+        <p>Discover the world with Smart Tourism. We offer budget-driven accommodations and an opportunity to explore serene beauties around the globe.</p>
+        <a href="{{ url_for('About') }}" class="btn-learn-more">Learn More</a>
+    </div>
+</body>

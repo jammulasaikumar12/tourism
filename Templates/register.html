@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form | Dan Aleko</title>
+  <link rel="stylesheet" href="logincss.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('../static/images/img1.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wrapper {
+      width: 420px;
+      background: transparent;
+      border: 2px solid rgba(10, 5, 5, 0.2);
+      box-shadow: 5px 5px 10px 10px #f5f2f288;
+      backdrop-filter: blur(50px);
+      color: rgba(24, 31, 21, 0.853);
+      border-radius: 12px;
+      padding: 30px 40px;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .wrapper h1 {
+      font-size: 36px;
+      text-align: center;
+      color: #333;
+    }
+
+    .wrapper .input-box {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      margin: 30px 0;
+      animation: slideIn 1s;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    input {
+      border: 2px solid #b9b5b5;
+    }
+
+    .input-box input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      outline: none;
+      border-radius: 40px;
+      font-size: 16px;
+      color: #ece9e9;
+      padding: 20px 45px 20px 20px;
+      transition: border-color 0.3s;
+    }
+
+    .input-box input::placeholder {
+      color: #ece9e9;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 20px;
+      top: 30%;
+      transform: translate(-50%);
+      font-size: 20px;
+    }
+
+    .wrapper .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14.5px;
+      margin: -15px 0 15px;
+      animation: fadeIn 1s;
+    }
+
+    .remember-forgot label input {
+      accent-color: #1c0909;
+      margin-right: 3px;
+    }
+
+    .remember-forgot a {
+      color: #230505;
+      text-decoration: none;
+    }
+
+    .remember-forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper .btn {
+      width: 100%;
+      height: 45px;
+      background: #d2cbcb;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      cursor: pointer;
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .wrapper .btn:hover {
+      background: #a5a2a2;
+    }
+
+    .wrapper .register-link {
+      font-size: 14.5px;
+      text-align: center;
+      margin: 20px 0 15px;
+      animation: fadeIn 1s;
+    }
+
+    .register-link p a {
+      color: #0c0505;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .register-link p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function f1()
+{
+    var x;
+    x=document.getElementById("a").value;
+    var y;
+    y=/^[a-zA-Z]+$/;
+    if(y.test(x))
+       document.getElementById("b").disabled=false;
+    else
+      window.alert("INVALID");   
+}
+
+function f3()
+{
+    var x;
+    x=document.getElementById("b");
+    var y;
+    y=new Date(x.value).getFullYear();
+    var w;
+    w=new Date().getFullYear();
+    var u;
+    u=w-y;
+    if(u>=18)
+       document.getElementById("c").disabled=false;
+    else
+      window.alert("AGE SHOULD BE ABOVE 18 YEARS");  
+}
+function f5()
+{
+  var x;
+  x=document.getElementById("c").value;
+  var y;
+  y=/^[a-zA-Z0-9@.]+$/;
+  if(y.test(x))
+     document.getElementById("d").disabled=false;
+  else
+    window.alert("INVALID");  
+}
+function f6()
+{
+  var x;
+  x=document.getElementById("d").value;
+  var y;
+  y=/^[a-zA-Z0-9@.!@#$%^&*;:/]+$/;
+  if(y.test(x))
+     document.getElementById("h").disabled=false;
+  else
+    window.alert("INVALID");  
+}
+function a1(){
+  var x;
+  x=document.getElementById("d").value;
+  var y;
+  d=document.getElementById("h").value;
+  if(x != y)
+     document.getElementById("g").disabled=false;
+  else
+    window.alert("Both Are Not Same");  
+
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="wrapper">
+    <form method="post">
+      <h1>Register</h1>
+      <div class="input-box">
+        <input type="text" name="first_name" id="a" onblur="f1()" placeholder="First Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="email" name="email" id="c" onblur="f5()" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" id="d" onblur="f6()" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="input-box">
+        <input type="password"  onblur="a1()" id="h" placeholder="Confirm Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="input-box">
+        <input type="date" name="date_of_birth" id="b"  placeholder="Date of Birth" required>
+        <i class='bx bxs-calendar'></i>
+      </div>
+      <button type="submit"  id="g" disabled="true" class="btn">Register</button>
+      <div class="register-link">
+        <p>Already have an account? <a href="{{ url_for('Login') }}">Login</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

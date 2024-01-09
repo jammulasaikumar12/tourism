@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            animation: fadeIn 1s forwards;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #3498db;
+            color: #fff;
+        }
+
+        td {
+            background: #e2e2e2;
+        }
+
+        tr:nth-child(odd) {
+            background: #f2f2f2;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        a:hover {
+            background: #c0392b;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+</head>
+<body>
+   <i><u><h1>Results for {{ place }}</h1></u><i>
+    
+    
+    <table style="padding:10px">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Hotel</th>
+                <th>Min Budget</th>
+                <th>Max Budget</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in data.iterrows() %}
+            <tr>
+                <td>{{ row['Places'] }}</td>
+                <td>{{ row['Hotels'] }}</td>
+                <td>{{ row['Budget Range Min']}}</td>
+                <td>{{ row['Budget Range Max']}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  
+    
+    <a href="/places">Back to Places</a>
+</body>
+</html>

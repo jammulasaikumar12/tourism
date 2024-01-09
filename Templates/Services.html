@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tourism - Services</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('../static/images/servicesimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333; /* Adjust font color based on your image */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; /* Change font color to white for the header */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff; /* Change font color to white for the navigation bar */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff; /* Change font color to white for navigation links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .services {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background for services */
+            text-align: center;
+            color: #fff; /* Change font color to white for the services section */
+        }
+        .services h2 {
+            color: #7ea04d; /* Adjust font color based on your image */
+        }
+        .services p {
+            color: #fff; /* Change font color to white for the services text */
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services li {
+            color: #7ea04d; /* Adjust font color for list items */
+            margin: 10px 0;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff; /* Change font color to white for the footer */
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Smart Tourism</h1>
+        <p>WHERE DREAMS MEET YOUR WALLET!!</p>
+    </header>
+    <nav>
+        <a href="{{url_for('Home')}}">Home</a>
+        <a href="{{url_for('Services')}}">Services</a>
+        <a href="{{url_for('About')}}">About</a>
+        <a href="{{url_for('Contact')}}">Contact</a>
+    </nav>
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>Smart Tourism offers a wide range of services to enhance your travel experience:</p>
+        <ul>
+            <li>Budget Driven Accommodations</li>
+            <li>Serene beauties to see!!</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Smart Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>

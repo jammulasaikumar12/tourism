@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tourism - Home</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('../static/images/bg.jpg') no-repeat center center fixed; /* Set a single image as the background for the entire page */
+            background-size: cover;
+            color: #333; /* Adjust font color based on your image */
+        }
+        header {
+            background-color: #7ea04d; /* Change the header bar background color to an aesthetic natural color */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff; /* Change font color to white for the navigation bar */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff; /* Change font color to white for navigation links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .main-content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+        .main-content h2 {
+            color: #7ea04d; /* Adjust font color based on your image */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the footer for better readability */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Smart Tourism</h1>
+        <p>WHERE DREAMS MEET UR WALLET!!</p>
+    </header>
+    <nav>
+        <a href="{{url_for('Home')}}">Home</a>
+        <a href="{{url_for('Services')}}">Services</a>
+        <a href="{{url_for('About')}}">About</a>
+        <a href="{{url_for('Contact')}}">Contact</a>
+    </nav>
+    <div class="main-content">
+        <h2>About Us</h2>
+        <p>Welcome to Smart Tourism, where we make your travel dreams come true without emptying your wallet. Our mission is to provide affordable and unforgettable travel experiences for everyone.</p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Smart Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>

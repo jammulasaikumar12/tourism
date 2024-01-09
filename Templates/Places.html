@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box; 
+}
+body{
+  background-color: rgb(183, 205, 225);
+}
+.row {
+  display: flex;
+  padding: 20px;
+}
+.column {
+  flex: 33.33%;
+  padding: 5px;
+  background-color:rgb(253, 250, 250); /* Transparent box background */
+  padding: 20px;
+  width: 60%; /* Adjust the width of the transparent box */
+  /* Align text to the right inside the box */
+  margin-right: 20px; /* Add some margin to the right */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+}
+.button a{
+  text-decoration: none;
+	color: #000;
+	font-size: 15px;
+  font-style: oblique;
+  padding: 15px 15px;
+	border-radius: 12px;
+	border: 2px solid rgb(253, 250, 250);
+}
+</style>
+</head>
+<body align="center">
+<h2><b><i>Select Destination</i></b></h2>
+<p></p>
+<div class="row">
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Banglore</i></b><br></p>
+    <img src="https://static.toiimg.com/photo/msid-88104076,width-96,height-65.cms" alt="Snow" style="width: 100%;border-radius:10px ;">
+    <p class="button"><a href="{{ url_for('Budget', place='Banglore') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Chennai</i></b><br></p>
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/80/f6/19/chidambaram-nataraja.jpg?w=1200&h=-1&s=1" alt="Snow" style="width: 100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Chennai') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Delhi</i></b><br></p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNp3pXdPxF6b3oDmy3Wid71tKekLyeoJnbGA&usqp=CAU" alt="Snow" style="width:100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Delhi') }}">Craft Your Coinage</a></p>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Hyderabad</i></b><br></p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGApCKtgKhncAg5dhmsT1o9OSeq76C7tVvQg&usqp=CAU" alt="Snow" style="width: 100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Hyderabad') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Kolkata</i></b><br></p>
+    <img src="https://static.toiimg.com/thumb/62804668/ThinkstockPhotos-642705228.jpg?width=1200&height=900" alt="Snow" style="width:100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Kolkata') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Jaipur</i></b><br></p>
+    <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2020/09/Feature-image-Rajasthan-tourism.jpg?tr=w-1200,h-900" alt="Snow" style="width:100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Jaipur') }}">Craft Your Coinage</a></p>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Mumbai</i></b><br></p>
+    <img src="https://static.toiimg.com/thumb/87649450/Gateway-Of-India.jpg?width=1200&height=900" alt="Snow" style="width: 100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Mumbai') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Panaji</i></b><br></p>
+    <img src="https://static.toiimg.com/thumb/47069484/Panaji.jpg?width=1200&height=900" alt="Snow" style="width:100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Panaji') }}">Craft Your Coinage</a></p>
+  </div>
+  <div class="column">
+    <p style="font-size: 20px;"><b><i>Kerala</i></b><br></p>
+    <img src="https://static.toiimg.com/thumb/61766681/Kerala.jpg?width=1200&height=900" alt="Snow" style="width:100%;border-radius:10px ">
+    <p class="button"><a href="{{ url_for('Budget', place='Kerala') }}">Craft Your Coinage</a></p>
+  </div>
+</div>
+
+</body>
+</html>

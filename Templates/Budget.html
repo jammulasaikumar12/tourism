@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f0f0f0; /* Set a background color */
+                margin: 0;
+                padding: 0;
+            }
+        
+            .right-main-frame {
+                background: url('main-frame-background.jpg') no-repeat center center fixed;
+                background-size: cover;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+        
+            h1 {
+                font-family: "Times New Roman", serif;
+                font-size: 36px;
+                font-weight: bold;
+                color: #333;
+                text-transform: italic;
+            }
+        
+            .ip {
+                font-size: 16px;
+                font-style: italic;
+                padding: 10px;
+                border: 2px solid #666;
+                border-radius: 10px;
+                width: 100%;
+                margin: 10px 0;
+            }
+        
+            .btn {
+                font-size: 18px;
+                padding: 10px 20px;
+                border-radius: 12px;
+                background-color: #007BFF;
+                color: #fff;
+                text-decoration: none;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+            }
+        
+            .btn:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+            }
+        
+            label {
+                font-size: 18px;
+                font-style: italic;
+                color: #333;
+            }
+        
+            #calculateButton {
+                display: inline-block;
+            }
+        
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        
+        </style>
+    
+    </head>
+    <body align="center">
+        <div><br><br></div>
+        <form method="post">
+        <div class="right-main-frame" class="sub-frame" style="background: url('main-frame-background.jpg') no-repeat center center fixed; background-size: cover;">
+            <h1><b><i>Craft Your Coinage</i></b></h1><br><br>
+            <input type="hidden" name="place" value="{{ place }}" /><br/>
+            <label for="budgetInput" style="font-size: larger;"><i>Unlock Your Financial Dreams Here!!!.</i></label><br><br><br>
+            <input type="number" name="budget" class="ip" required placeholder="Enter your budget here"><br><br>
+            <button id="calculateButton" class="btn">Submit</button>

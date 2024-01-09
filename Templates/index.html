@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <style>
+        body {
+            background: url('indback.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+        }
+        .navbar h1 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .signup a {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .signup a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .body {
+            text-align: center;
+            color: #fff;
+            padding: 100px 0;
+        }
+        .body h1 {
+            font-size: 48px;
+        }
+        .body a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .body a:hover {
+            background-color: #0056b3;
+        }
+        .tours {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .places {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .places h2 {
+            font-size: 24px;
+        }
+        .places img {
+            width: 300px;
+            height: 250px;
+            border-radius: 12px;
+        }
+        .places a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+        }
+        .places a:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Smart Tourism</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Services')}}">Services</a></li>
+                <li><a href="{{url_for('About')}}">About</a></li>
+                <li><a href="{{url_for('Contact')}}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="signup">
+            <a href="{{ url_for('Login') }}">Login</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="heading">
+            <br><br><br><br><br>
+            <h1>Travel With Us</h1>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <a href="{{url_for('About')}}">Learn More</a>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- <a href="#">Copyright</a> -->
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <!-- <a href="#">Cookies</a> -->
+        <a href="#">Complaints</a>
+    </div>
+</body>
+</html>

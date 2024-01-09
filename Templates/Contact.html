@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Tourism</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('../static/images/contactimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff; /* Adjust font color to match your abstract travel art image */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; /* Change font color to white for the header */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff; /* Change font color to white for the navigation bar */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff; /* Change font color to white for navigation links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background for contact section */
+            text-align: center;
+            color: #fff; /* Change font color to white for the contact section */
+        }
+        .contact h2 {
+            color: #7ea04d; /* Adjust font color based on your abstract travel art image */
+        }
+        .contact p {
+            color: #fff; /* Change font color to white for the contact text */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff; /* Change font color to white for the footer */
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any inquiries or assistance</p>
+    </header>
+    <nav>
+        <a href="{{url_for('Home')}}">Home</a>
+        <a href="{{url_for('Services')}}">Services</a>
+        <a href="{{url_for('About')}}">About</a>
+        <a href="{{url_for('Contact')}}">Contact</a>
+    </nav>
+    <div class="contact">
+        <h2>Contact Information</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+        <p>Instagram: <a href="https://www.instagram.com/SmartTourismIndia" style="color: #fff;">@SmartTourismIndia</a></p>
+        <p>Email: <a href="mailto:smarttourismindia@gmail.com" style="color: #fff;">smarttourismindia@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919848385838" style="color: #fff;">+91 96526 45669</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Smart Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>
